@@ -14,14 +14,14 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-
+        binding.changeButton.setOnClickListener {
+            changeText()
+        }
     }
 
-    fun changeText(view: View) {
-
-
-        if(binding.textView.text.equals("TextView is Changed.")){
-            binding.textView.text = "View Binding Example"
-        }else binding.textView.text = "TextView is Changed."
-    }
+  fun changeText (){
+      if(binding.textView.text.equals("TextView is Changed.")){
+          binding.textView.text = "View Binding Example"
+      }else binding.textView.text = "TextView is Changed."
+  }
 }
